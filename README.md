@@ -1,49 +1,43 @@
 💳 Fraud Detection System using Machine Learning
 
-A Streamlit-based Fraud Detection System that predicts whether a financial transaction is Fraudulent or Legitimate using a trained LightGBM model.
-The application takes transaction details as input, performs feature engineering (including distance calculation), and displays real-time predictions.
+A Machine Learning–powered Fraud Detection System built using LightGBM and deployed with Streamlit.
+The system predicts whether a transaction is Fraudulent or Legitimate based on real-time transaction inputs and geolocation distance.
 
-
-🚀 Features
+🚀 Live Features
 
 🔍 Real-time fraud prediction
 
-🤖 Machine Learning model (LightGBM)
+🤖 Trained LightGBM classification model
 
-📍 Distance calculation using latitude & longitude (Haversine via Geopy)
+📍 Distance calculation using latitude & longitude
 
-🧠 Encoded categorical features using pre-trained label encoders
+🧠 Pre-trained label encoders for categorical data
 
-🖥️ Interactive UI built with Streamlit
+🖥️ Interactive Streamlit web interface
 
-📊 Supports multiple transaction attributes
-
+🔐 Privacy-safe credit card hashing
 
 🛠️ Tech Stack
-
-Frontend: Streamlit
-
-Backend / ML: Python, LightGBM
-
-Libraries: Pandas, NumPy, Joblib, Geopy
-
-Model Serialization: Joblib
-
-'''
+Category	Tools
+Language	Python
+ML Model	LightGBM
+Frontend	Streamlit
+Data Handling	Pandas, NumPy
+Distance Calc	Geopy (Haversine)
+Model Storage	Joblib
 📂 Project Structure
 Fraud_Detection_System/
 │
 ├── app.py                     # Streamlit application
-├── dataset.csv                # Dataset used for training the model
+├── dataset.csv                # Dataset used for training
 ├── fraud_detection_model.jb   # Trained LightGBM model
-├── label_encoders.jb          # Saved label encoders
-├── requirements.txt           # Required dependencies
+├── label_encoders.jb          # Saved encoders for categorical features
+├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation
-'''
 
 📥 Input Parameters
 
-The system requires the following transaction details:
+The application takes the following transaction details:
 
 Merchant Name
 
@@ -55,23 +49,23 @@ User Latitude & Longitude
 
 Merchant Latitude & Longitude
 
-Transaction Hour, Day, Month
+Transaction Time (Hour, Day, Month)
 
 Gender
 
 Credit Card Number
 
-The distance between user and merchant is automatically calculated.
+📍 Distance between user & merchant is automatically calculated.
 
 ⚙️ Installation & Setup
-1️⃣ Clone the Repository
+1️⃣ Clone Repository
 git clone https://github.com/your-username/fraud-detection-system.git
 cd fraud-detection-system
 
-2️⃣ Create Virtual Environment (Optional but Recommended)
+2️⃣ (Optional) Create Virtual Environment
 python -m venv venv
-venv\Scripts\activate   # For Windows
-source venv/bin/activate # For Linux/Mac
+venv\Scripts\activate      # Windows
+source venv/bin/activate  # Linux / Mac
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
@@ -79,44 +73,58 @@ pip install -r requirements.txt
 ▶️ Run the Application
 streamlit run app.py
 
-Then open your browser and visit:
+
+Open in browser:
+
 http://localhost:8501
 
+🧠 How It Works
 
-🧠 Prediction Logic
+User enters transaction details
 
-Categorical features are encoded using saved label encoders.
+Distance is calculated using Haversine formula
 
-Unseen categories are handled safely.
+Categorical data is encoded using saved encoders
 
-Credit card number is hashed for privacy.
+Credit card number is hashed for privacy
 
-LightGBM model predicts:
+LightGBM model predicts fraud probability
 
-Fraudulent Transaction
+Output:
 
-Legitimate Transaction
-
-
-📊 Output
-After clicking "Check For Fraud", the system displays:
-
-✅ Legitimate Transaction
 ❌ Fraudulent Transaction
 
-📌 Future Improvements
+✅ Legitimate Transaction
 
-Add transaction history visualization
+📊 Dataset
 
-Improve handling of unseen categories
+File: dataset.csv
 
-Deploy on cloud (AWS / Streamlit Cloud)
+Contains historical transaction records
 
-Add authentication & logging
+Used for training the LightGBM model
+
+Includes categorical, numerical & geolocation features
+
+📈 Future Enhancements
+
+📊 Transaction analytics dashboard
+
+☁️ Cloud deployment (Streamlit Cloud / AWS)
+
+🔐 User authentication
+
+🧪 Model performance metrics visualization
 
 👨‍💻 Author
 
 Prasad Chandankumar Someshwar
-MCA | AI/ML Enthusiast
+🎓 MCA | AI/ML Enthusiast
+
 📧 Email: prasadchandan913@gmail.com
-🔗 GitHub: https://github.com/Chandanprasad913
+
+🔗 GitHub: Chandanprasad913
+
+⭐ Support
+
+If you found this project helpful, please ⭐ star the repository and share it!
