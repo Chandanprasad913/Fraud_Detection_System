@@ -52,7 +52,7 @@ Fraud_Detection_System/
 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fraud-detection-system.git
+git clone https://github.com/Chandanprasad913/Fraud_Detection_System.git
 cd fraud-detection-system
 ```
 
